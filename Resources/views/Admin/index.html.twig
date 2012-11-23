@@ -1,0 +1,46 @@
+<h1>{% trans %}module.modules{% endtrans %}</h1>
+
+<form action="{{ path('padam87_module_admin_index') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form._token) }}
+    <div class="row-fluid row-equalHeights">
+    {% set counter = 0 %}
+    {% for module_name, module in form %}
+        {% if module_name != '_token' %}
+            <div class="span3 well well-small">
+                <table>
+                {% for submodule in module %}
+                    {% if submodule.get('value') == 'main' %}
+                    <tr>
+                        <th>{{ form_widget(submodule, { 'attr': { 'onclick': 'Module.mainClicked(this)' } }) }}</th>
+                        <th>{{ form_label(submodule, 'modules.' ~ module_name ~ '.' ~ submodule.get('value') ) }}</th>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td>{{ form_widget(submodule) }}</td>
+                        <td>{{ form_label(submodule, 'modules.' ~ module_name ~ '.' ~ submodule.get('value') ) }}</td>
+                    </tr>
+                    {% endif %}
+                {% endfor %}
+                </table>
+            </div>
+            {% set counter = counter + 1 %}
+        {% endif %}
+        {% if counter is divisibleby(4) %}
+            </div><div class="row-fluid row-equalHeights">
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div class="form-actions">
+        <button class="btn btn-large btn-primary">{% trans %}save{% endtrans %}</button>
+    </div>
+</form>
+	
+{% block javascripts %}
+    {% javascripts
+        output='js/compiled/module.js'
+        debug=false
+        'bundles/padam87module/js/module.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}

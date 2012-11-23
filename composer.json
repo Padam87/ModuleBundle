@@ -1,0 +1,17 @@
+{
+    "name": "padam87/module-bundle",
+    "type": "symfony-bundle",
+    "description": "Padam87 ModuleBundle",
+    "keywords": ["symfony", "modularization"],
+    "homepage": "https://github.com/Padam87/ModuleBundle",
+    "authors": [
+        {
+            "name": "Adam Prager",
+            "email": "prager.adam87@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Padam87\\ModuleBundle": "" }
+    },
+    "target-dir": "Padam87/ModuleBundle"
+}
