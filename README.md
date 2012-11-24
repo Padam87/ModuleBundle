@@ -35,7 +35,7 @@ This annotation will throw an exception if the module is not enabled.
 ### Routing:
 
 	Padam87ModuleBundle:
-	    resource: "@Padam87SearchBundle/Controller/"
+	    resource: "@Padam87ModuleBundle/Controller/"
 	    type:     annotation
 	    prefix:   /admin
 
@@ -72,7 +72,7 @@ OR
 
 You can create yout own bundle as a child of this one.
 
-Check Padam87ModulesBundle:Admin:index.html.twig for an example
+Check Padam87ModuleBundle:Admin:index.html.twig for an example
 
 ## Dependencies
 
