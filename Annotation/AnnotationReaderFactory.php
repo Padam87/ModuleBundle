@@ -12,7 +12,7 @@ class AnnotationReaderFactory
 {
     /**
      * Creates a preconfigured annotation reader, only for Module annotations, ignores others
-     * @return $AnnotationReader \Doctrine\Common\Annotations\AnnotationReader 
+     * @return $AnnotationReader \Doctrine\Common\Annotations\AnnotationReader
      */
     public static function create()
     {

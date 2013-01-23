@@ -3,7 +3,6 @@
 namespace Padam87\ModuleBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity()
@@ -18,28 +17,28 @@ class Module
      * @var int
      */
     protected $id;
-    
+
     /**
      * @ORM\Column(type="string", length=100)
      * @var string
      */
-	protected $name;
-    
+    protected $name;
+
     /**
      * @ORM\Column(type="boolean")
-     * @var boolean 
+     * @var boolean
      */
-	protected $active;
-	
-	public function __toString()
-	{
-		return $this->getName();
-	}
+    protected $active;
+
+    public function __toString()
+    {
+        return $this->getName();
+    }
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -59,7 +58,7 @@ class Module
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -79,7 +78,7 @@ class Module
     /**
      * Get is_active
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getActive()
     {

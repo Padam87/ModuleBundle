@@ -2,12 +2,12 @@ services:
     module.listener:
         class: Padam87\ModuleBundle\Listener\ModuleListener
         arguments:
-            em: "@doctrine.orm.entity_manager" 
+            em: "@doctrine.orm.entity_manager"
         tags:
             - { name: kernel.event_listener, event: kernel.controller, method: onCoreController, priority: -255 }
     twig.extensions.module:
         class: Padam87\ModuleBundle\Twig\ModuleExtension
-        arguments: 
-            em: "@module.listener" 
+        arguments:
+            em: "@module.listener"
         tags:
             - { name: twig.extension }

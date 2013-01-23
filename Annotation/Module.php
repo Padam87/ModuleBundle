@@ -20,7 +20,7 @@ final class Module
         if (!isset($values['modules'])) {
             throw new \InvalidArgumentException('You must define a "modules" attribute for each Module annotation.');
         }
-        
+
         $this->modules = array_map('trim', explode(',', $values['modules']));
     }
 }
