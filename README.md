@@ -2,7 +2,7 @@
 
 Modulariazion for Symfony2. Enable / disable modules.
 
-## Example ##
+## 1. Example ##
 
 	/**
      * @Route("/")
@@ -19,20 +19,20 @@ This annotation will throw an exception if the module is not enabled.
 		link to blog
 	{% endif %}
 
-## Installation
+## 2. Installation
 
-### Composer
+### 2.1. Composer
 
     "padam87/module-bundle": "dev-master",
 
-### AppKernel:
+### 2.2. AppKernel:
 
     $bundles = array(
 		...
         new Padam87\ModuleBundle\Padam87ModuleBundle(),
     );        
 
-### Routing:
+### 2.3. Routing:
 
 	Padam87ModuleBundle:
 	    resource: "@Padam87ModuleBundle/Controller/"
@@ -41,7 +41,7 @@ This annotation will throw an exception if the module is not enabled.
 
 The route will be /admin/modules this way... feel free to modify.
 
-### config.yml
+### 2.4. config.yml
 	imports:
 		...
 	    - { resource: modules.yml }
@@ -61,7 +61,7 @@ Create your modules.yml. Example:
 
 Note: If you set one of the options to false, you wont be able to see that module in the admin, so it will be permanently disabled.
 
-### View
+### 2.5. View
 
 Athough the bundle provides a default view, you would propably want to create your own.
 You can do that by adding an:
@@ -70,12 +70,4 @@ You can do that by adding an:
 
 OR
 
-You can create yout own bundle as a child of this one.
-
-Check Padam87ModuleBundle:Admin:index.html.twig for an example
-
-## Dependencies
-
-None.
-
-
+You can create your own bundle as a child of this one.
