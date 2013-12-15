@@ -71,3 +71,7 @@ You can do that by adding an:
 OR
 
 You can create your own bundle as a child of this one.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Padam87/modulebundle/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
