@@ -21,7 +21,7 @@ class AdminController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $this->_em = $this->getDoctrine()->getEntityManager();
+        $this->_em = $this->getDoctrine()->getManager();
         $Builder = $this->createFormBuilder();
 
         foreach ($this->container->getParameter('modules') as $module_name => $module) {
