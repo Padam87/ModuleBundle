@@ -1,6 +1,7 @@
 {
     "name": "padam87/module-bundle",
     "type": "symfony-bundle",
+    "license": "MIT",
     "description": "Padam87 ModuleBundle",
     "keywords": ["symfony", "modularization"],
     "homepage": "https://github.com/Padam87/ModuleBundle",
