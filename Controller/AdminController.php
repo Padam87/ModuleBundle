@@ -47,7 +47,7 @@ class AdminController extends Controller
         $form = $Builder->getForm();
 
         if ($request->getMethod() == 'POST') {
-            $form->bindRequest($request);
+            $form->handleRequest($request);
 
             $data = $form->getData();
 
