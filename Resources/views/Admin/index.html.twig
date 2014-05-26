@@ -9,15 +9,15 @@
             <div class="span3 well well-small">
                 <table>
                 {% for submodule in module %}
-                    {% if submodule.get('value') == 'main' %}
+                    {% if submodule.vars.value == 'main' %}
                     <tr>
                         <th>{{ form_widget(submodule, { 'attr': { 'onclick': 'Module.mainClicked(this)' } }) }}</th>
-                        <th>{{ form_label(submodule, 'modules.' ~ module_name ~ '.' ~ submodule.get('value') ) }}</th>
+                        <th>{{ form_label(submodule, 'modules.' ~ module_name ~ '.' ~ submodule.vars.value ) }}</th>
                     </tr>
                     {% else %}
                     <tr>
                         <td>{{ form_widget(submodule) }}</td>
-                        <td>{{ form_label(submodule, 'modules.' ~ module_name ~ '.' ~ submodule.get('value') ) }}</td>
+                        <td>{{ form_label(submodule, 'modules.' ~ module_name ~ '.' ~ submodule.vars.value ) }}</td>
                     </tr>
                     {% endif %}
                 {% endfor %}

@@ -86,7 +86,7 @@ class AdminController extends Controller
 
             $this->_em->flush();
 
-            $this->get('session')->setFlash('success', $this->get('translator')->trans('messages.save.successful'));
+            $this->get('session')->getFlashBag()->set('success', $this->get('translator')->trans('messages.save.successful'));
 
             return $this->redirect($this->generateUrl('padam87_module_admin_index'));
         }
